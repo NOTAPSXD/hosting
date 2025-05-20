@@ -1,64 +1,141 @@
-# 🚀 Free Dashboard + Panel + Wings Installation 24/7 By Code X 🚀
+# 🚀 Code X: Free Dashboard, Panel & Wings Installation 🚀
 
-## 🚨 IMPORTANT! PLEASE READ BEFORE STARTING 🚨
-**Before attempting any installation, we highly recommend watching the full video guide provided by the original owner.**
-**Original Owner: Dragon Labs**
-
-**Watch the full guide first, then if you encounter any issues, please create a ticket in our Discord server.**
-
-## Need help? Join our Discord!
-[https://dsc.gg/codexsupport](https://dsc.gg/codexsupport)
-If you encounter any issues, please create a ticket in our Discord server for support.
+Welcome to Code X! We provide a streamlined guide for installing your Pterodactyl-like Dashboard, Panel, and Wings (Daemon) 24/7.
 
 ---
 
-## 💻 Installation Guides
+## 🚨 **IMPORTANT NOTICE: WATCH THE VIDEO GUIDE FIRST!** 🚨
 
-### Panel Installation
+**Before you begin any installation steps, it is CRITICAL that you watch the full video guide provided by the original developer.** This guide will walk you through the entire process and help you understand the configuration requirements.
 
-1.  **Clone the repository:**
-    `git clone https://github.com/dragonlabsdev/v2panel`
-2.  **Install Node.js (v23.x):**
-    `curl -sL https://deb.nodesource.com/setup_23.x | sudo bash -`
-3.  **Install required packages:**
-    `apt-get install nodejs git`
-4.  **Navigate to the panel directory:**
-    `cd v2panel`
-5.  **Unzip and enter the panel directory:**
-    `apt install zip -y && unzip panel.zip && cd panel`
-6.  **Install dependencies, seed database, and create a user:**
-    `npm install && npm run seed && npm run createUser`
+**Original Project & Guide By: Dragon Labs**
+
+**We strongly advise you to watch the full video first. Only then, if you encounter persistent issues, should you create a ticket in our Discord server for support.**
+
+---
+
+## ❓ **Having Issues? Get Support Here!**
+Join our Discord community for assistance and to create support tickets:
+🔗 **[https://dsc.gg/codexsupport](https://dsc.gg/codexsupport)**
+
+---
+
+## ✨ **Overview of Components**
+
+This guide covers the installation of three core components:
+
+1.  **Panel:** The web-based administration interface.
+2.  **Daemon / Wings:** The server-side process that manages game servers.
+3.  **Dashboard:** Your front-end interface for users.
+
+---
+
+## 📋 **Prerequisites**
+
+Before you start, ensure your server meets these requirements:
+
+* **Operating System:** A clean installation of Ubuntu (recommended) or Debian.
+* **Root Access:** You need to be logged in as root or have `sudo` privileges.
+* **Basic Tools:** `git`, `nodejs`, `npm`, `zip`, `curl`, `nano`.
+
+---
+
+## 🚀 **Getting Started: Installation Steps**
+
+Follow these steps carefully for each component.
+
+### **1. Panel Installation**
+
+This sets up the core web panel for managing your servers.
+
+1.  **Clone the Panel Repository:**
+    ```bash
+    git clone [https://github.com/dragonlabsdev/v2panel](https://github.com/dragonlabsdev/v2panel)
+    ```
+2.  **Install Node.js (Version 23.x Recommended):**
+    ```bash
+    curl -sL [https://deb.nodesource.com/setup_23.x](https://deb.nodesource.com/setup_23.x) | sudo bash -
+    ```
+3.  **Install Essential Packages:**
+    ```bash
+    apt-get update && apt-get install -y nodejs git zip
+    ```
+4.  **Navigate to Panel Directory:**
+    ```bash
+    cd v2panel
+    ```
+5.  **Extract & Enter Panel Subdirectory:**
+    ```bash
+    unzip panel.zip && cd panel
+    ```
+6.  **Install Dependencies, Seed Database, and Create Admin User:**
+    ```bash
+    npm install && npm run seed && npm run createUser
+    ```
+    *(Follow the prompts to create your admin user credentials.)*
 7.  **Start the Panel:**
-    `node .`
+    ```bash
+    node .
+    ```
 
 ---
 
-### Daemon / Wings Installation
+### **2. Daemon / Wings Installation**
 
-1.  **Clone the repository:**
-    `git clone https://github.com/draco-labes/draco-daemon`
-2.  **Navigate to the daemon directory:**
-    `cd draco-daemon`
-3.  **Install dependencies:**
-    `npm install`
-4.  **Configure DracoDaemon (refer to documentation/prompts during execution):**
-    *(You may be prompted for configuration details after running the next step)*
-5.  **Start the Daemon:**
-    `node .`
+This component allows your Panel to communicate with and manage game servers.
+
+1.  **Clone the Daemon Repository:**
+    ```bash
+    git clone [https://github.com/draco-labes/draco-daemon](https://github.com/draco-labes/draco-daemon)
+    ```
+2.  **Navigate to Daemon Directory:**
+    ```bash
+    cd draco-daemon
+    ```
+3.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Configure DracoDaemon:**
+    ```bash
+    node .
+    ```
 
 ---
 
-### Dashboard Installation
+### **3. Dashboard Installation**
 
-1.  **Clone the repository:**
-    `git clone https://github.com/dragonlabsdev/dashboard-v1.0.0`
-2.  **Navigate to the dashboard directory:**
-    `cd dashboard-v1.0.0`
-3.  **Install dependencies:**
-    `npm install`
-4.  **Rename environment example file:**
-    `mv .env_exemple .env`
-5.  **Edit environment variables (important for configuration):**
-    `nano .env`
+The Dashboard provides the user-facing interface for your clients.
+
+1.  **Clone the Dashboard Repository:**
+    ```bash
+    git clone [https://github.com/dragonlabsdev/dashboard-v1.0.0](https://github.com/dragonlabsdev/dashboard-v1.0.0)
+    ```
+2.  **Navigate to Dashboard Directory:**
+    ```bash
+    cd dashboard-v1.0.0
+    ```
+3.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Prepare Environment Configuration:**
+    ```bash
+    mv .env_exemple .env
+    ```
+5.  **Edit Environment Variables:**
+    ```bash
+    nano .env
+    ```
 6.  **Start the Dashboard:**
-    `node .`
+    ```bash
+    node .
+    ```
+
+---
+
+
+## 💖 **Credits**
+This installation guide is provided by **Code X**.
+All core components (Panel, Daemon, Dashboard) are originally developed by **Dragon Labs**.
+We extend our gratitude for their hard work and contributions to the community.
