@@ -17,18 +17,20 @@ If you encounter any issues, please create a ticket in our Discord server for su
 ### Panel Installation
 
 1.  **Clone the repository:**
-    ``` git clone https://github.com/dragonlabsdev/v2panel ```
-2.  **Install Node.js (v23.x):**
+    ``` bash
+     git clone https://github.com/dragonlabsdev/v2panel
+    ```
+3.  **Install Node.js (v23.x):**
     ``curl -sL https://deb.nodesource.com/setup_23.x | sudo bash -``
-3.  **Install required packages:**
+4.  **Install required packages:**
     ```apt-get install nodejs git```
-4.  **Navigate to the panel directory:**
+5.  **Navigate to the panel directory:**
     ```cd v2panel```
-5.  **Unzip and enter the panel directory:**
+6.  **Unzip and enter the panel directory:**
     ```apt install zip -y && unzip panel.zip && cd panel```
-6.  **Install dependencies, seed database, and create a user:**
+7.  **Install dependencies, seed database, and create a user:**
     ```npm install && npm run seed && npm run createUser```
-7.  **Start the Panel:**
+8.  **Start the Panel:**
     ```node .```
 
 ---
