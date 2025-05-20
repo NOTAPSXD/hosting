@@ -17,7 +17,7 @@ If you encounter any issues, please create a ticket in our Discord server for su
 ### Panel Installation
 
 1.  **Clone the repository:**
-    ```git clone https://github.com/dragonlabsdev/v2panel```
+    ``` git clone https://github.com/dragonlabsdev/v2panel ```
 2.  **Install Node.js (v23.x):**
     ``curl -sL https://deb.nodesource.com/setup_23.x | sudo bash -``
 3.  **Install required packages:**
